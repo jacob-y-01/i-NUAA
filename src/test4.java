@@ -6,7 +6,11 @@ import org.jsoup.Jsoup;
 import java.io.IOException;
 import java.util.Map;
 
+
 public class test4 {
+
+    // 每日日期
+    public static String data="2022817";
     // 存放登录后获得的cookie
     private static Map<String, String> cookies = null;
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -127,7 +131,10 @@ public class test4 {
                 data("bzxyydesc","").
                 data("id","28472315").
                 data("uid","237271").
-                data("date","20220815").
+ //********************
+ //改日期
+ // ********************
+                data("date",data).
                 data("tw","0").
                 data("sfcxtz","0").
                 data("sfyyjc","0").
