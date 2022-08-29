@@ -1,4 +1,5 @@
 程序依赖于jsoup.jar包
+JDK1.8,IDE:idea
 兄弟们点点star
 
 使用步骤：
