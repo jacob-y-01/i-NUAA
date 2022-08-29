@@ -23,3 +23,12 @@ http://t.csdn.cn/s6UvI
 https://blog.csdn.net/m0_37701381/article/details/104163877
 如何将jar包部署到Linux服务器，定时执行？
 http://t.csdn.cn/QOvSI
+
+
+
+*******jar包使用方法**********
+首先确保你的Java环境，本例使用的是java 1.8版本
+将jar包，user.txt,message.txt放在一个目录下
+打开CMD命令行，进入到该目录下
+输入命令 java -jar i-NUAA.jar
+接下来你会看到打卡信息
