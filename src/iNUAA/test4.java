@@ -35,7 +35,6 @@ public class test4 {
                 }
                     // 登录
                     login();
-
                     // 4. 再使用cookie 向服务器发送打卡表单
                     // 如果打卡成功，返回true
                     if (tianxie()) {
@@ -47,11 +46,6 @@ public class test4 {
         {
             System.out.println(e.getMessage());
         }
-
-
-
-
-
     }
     public static void init()
     {
