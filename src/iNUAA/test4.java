@@ -25,21 +25,32 @@ public class test4 {
         // 2. 获取今日日期
         getdate();
 
-        // 逐个用户打卡
-        for (Map.Entry<String, String> entry : UserPass.entrySet()) {
-            // 取出用户名和密码
-            username = entry.getKey();
-            password = entry.getValue();
-            // 3. 登录获取到cookie
-            login();
-            // 4. 再使用cookie 向服务器发送打卡表单
-            // 如果打卡成功，返回true
-            if(tianxie())
-            {
-                System.out.println(username+"已打卡");
-                UserPass.remove(username);
+        try {
+
+            while (!UserPass.isEmpty()) {
+                // 获取用户id和密码
+                for (String key : UserPass.keySet()) {
+                    username = key;
+                    password = UserPass.get(key);
+                }
+                    // 登录
+                    login();
+
+                    // 4. 再使用cookie 向服务器发送打卡表单
+                    // 如果打卡成功，返回true
+                    if (tianxie()) {
+                        System.out.println(username + "已打卡");
+                        UserPass.remove(username);
+                    }
             }
+        }catch (Exception e)
+        {
+            System.out.println(e.getMessage());
         }
+
+
+
+
 
     }
     public static void init()
